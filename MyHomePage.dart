@@ -14,6 +14,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text("Aplikasi Bengkel"),
       ),
 
@@ -39,8 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
 
-          Padding(padding: EdgeInsets.all(16)
+          Padding(
+            padding: EdgeInsets.all(16)
           ),
+
           ElevatedButton(
             child: Text("Tampilkan Nama"),
             onPressed: () {
